@@ -28,6 +28,7 @@ fun main() {
         println(repository.subscribers_count)
         println(repository.owner.html_url)
         println(repository.owner.avatar_url)
+        println(repository.owner.gravatar_id)
 
         File("Kotlin.html").writeText("""
             <!DOCTYPE html>
@@ -39,6 +40,7 @@ fun main() {
             <body>
               <h1><a href= '${repository.owner.html_url}'>${repository.owner.login} - ${repository.name}</a></h1>
               <p>${repository.owner.avatar_url}
+              <p>Gravatar_id: ${repository.owner.id}
               <p>Subscribers: ${repository.subscribers_count}</p>
             </body>
             </html>
